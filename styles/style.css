@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-image: url("../media/img.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+header {
+  height: 5vh;
+  width: 100%;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+header ul {
+  list-style: none;
+  display: flex;
+  width: 90%;
+  justify-content: space-around;
+}
+header ul a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+header ul a:hover {
+  text-decoration: underline;
+  color: gray;
+}
+
+.main {
+  color: whitesmoke;
+  display: flex;
+  width: 100%;
+  height: 40vh;
+  justify-content: space-between;
+  position: relative;
+  top: 20vh;
+}
+.main div {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 30%;
+  border-radius: 2%;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0;
+  position: relative;
+  top: 60vh;
+}
+
+#our_photos, #music {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 182, 193, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+#our_photos {
+  background-color: rgba(255, 182, 193, 0.4);
+}
+
+#our_photos img {
+  width: 40%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+#our_photos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.text-about {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-about h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.text-about p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+#music {
+  background-color: rgba(24, 24, 24, 0.9);
+}
+
+#music img {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.music-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+  color: whitesmoke;
+}
+
+.music-container h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.music-container p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+audio {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+  background-color: #1db954;
+  color: whitesmoke;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#creation {
+  color: whitesmoke;
+  position: relative;
+  top: 120vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+#creation div {
+  width: 45%;
+  background-color: rgba(24, 24, 24, 0.9);
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#creation h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+#creation p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#creation video {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 1200px) {
+  .main {
+    flex-direction: column;
+    height: auto;
+  }
+  .main div {
+    width: 80%;
+    margin: 10px auto;
+  }
+  .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  #our_photos, #music {
+    width: 90%;
+    flex-direction: column;
+    align-items: center;
+  }
+  #our_photos img {
+    width: 100%;
+  }
+  .text-about {
+    width: 100%;
+    text-align: center;
+  }
+  #music img {
+    width: 100px;
+    height: 100px;
+  }
+  .music-container {
+    padding-left: 0;
+    text-align: center;
+  }
+  #creation {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  #creation div {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 768px) {
+  header ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  header {
+    height: auto;
+    padding: 10px;
+  }
+  .main {
+    top: 10vh;
+  }
+  #creation h2, .music-container h2 {
+    font-size: 20px;
+  }
+  #creation p, .music-container p {
+    font-size: 16px;
+  }
+  audio {
+    height: 35px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
